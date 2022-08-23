@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="videoItem"
+            type="com.qxy.wltyVideo.models.RankItemBean" />
+
+        <import type="com.qxy.wltyVideo.models.RankItemBean" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:onClick="@{videoItem::cilck}"
+        android:paddingLeft="15dp"
+        android:paddingTop="5dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="5dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_poster"
+            android:layout_width="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_poster"
+                android:layout_width="100dp"
+                android:layout_height="125dp"
+                app:poster="@{videoItem.poster}"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="2dp"
+                android:layout_marginStart="2dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@mipmap/ic_launcher" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:text="Top1"
+                android:text="@{videoItem.index}"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:padding="2dp"
+                android:background="#ffD700"
+                app:layout_constraintTop_toTopOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_marginStart="10dp"
+            android:textStyle="bold"
+            android:text="@{videoItem.name}"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@id/cl_poster"
+            app:layout_constraintTop_toTopOf="@+id/cl_poster"
+            tools:text="人生大事" />
+
+        <TextView
+            android:id="@+id/tv_doubantitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="豆瓣评分"
+            android:visibility="gone"
+            app:layout_constraintStart_toEndOf="@id/cl_poster"
+            app:layout_constraintTop_toBottomOf="@+id/tv_name" />
+
+        <TextView
+            android:id="@+id/tv_douban"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginStart="10dp"
+            app:layout_constraintStart_toEndOf="@+id/tv_doubantitle"
+            app:layout_constraintTop_toBottomOf="@+id/tv_name"
+            tools:text="8.0" />
+
+        <TextView
+            android:id="@+id/tv_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:textSize="14sp"
+            android:text="@{videoItem.tags}"
+            app:layout_constraintStart_toEndOf="@+id/cl_poster"
+            app:layout_constraintTop_toBottomOf="@+id/tv_douban"
+            tools:text="悬疑" />
+
+        <TextView
+            android:id="@+id/tv_elease_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:textSize="14sp"
+            android:text="@{videoItem.release_date}"
+            app:layout_constraintStart_toEndOf="@+id/cl_poster"
+            app:layout_constraintTop_toBottomOf="@+id/tv_type"
+            tools:text="2022-8-9" />
+
+
+        <ImageView
+            android:id="@+id/tv_hot_icon"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/icon_hot"
+            app:layout_constraintStart_toEndOf="@+id/cl_poster"
+            app:layout_constraintTop_toBottomOf="@+id/tv_elease_date" />
+
+        <TextView
+            android:id="@+id/tv_hot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:layout_marginTop="14dp"
+            android:text="@{videoItem.search_hot}"
+            app:layout_constraintStart_toEndOf="@+id/tv_hot_icon"
+            app:layout_constraintTop_toBottomOf="@+id/tv_elease_date"
+            tools:text="1098.8万" />
+
+        <TextView
+            android:id="@+id/btn_by_ticket"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#E3170D"
+            android:paddingLeft="15dp"
+            android:paddingTop="5dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="5dp"
+            android:text="@string/by_ticket"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

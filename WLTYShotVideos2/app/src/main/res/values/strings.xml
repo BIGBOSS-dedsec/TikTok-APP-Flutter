@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ShotVideos</string>
+    <string name="video_rank">抖音电影榜</string>
+    <string name="variety_rank">抖音综艺榜</string>
+    <string name="tv_rank">抖音剧集榜</string>
+    <string name="by_ticket">购票</string>
+    <string name="elease">上映</string>
+</resources>
