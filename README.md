@@ -57,10 +57,6 @@ Test phone:
 1. SM-N9600 -- Samsung Galaxy Note9 (One UI2.5)
 Android OS version: 10.0 Kernel version: 4.9.186-22986754
 ![\[图片\]](https://img-blog.csdnimg.cn/017e7ae3ff094fed8ee7d4880978e2e7.png)
-5. Demo Demo Video
-Project real machine debugging: (real machine running Tiktok APP movie ranking)
-![\[图片\]](https://img-blog.csdnimg.cn/2288c024aac74edfb1fb991b25402b0b.png)
-![\[图片\]](https://img-blog.csdnimg.cn/7da31310269444c483f6f6f2cb3cbc27.png)
 # project video demo address: https://live.csdn.net/v/234203
 Screenshot of project content:
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/7cc2a5ea0d414560bcfda206a6828414.png)
